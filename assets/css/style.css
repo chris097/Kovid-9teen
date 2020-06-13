@@ -1,8 +1,8 @@
-@import "pages/__news.css";
-@import "pages/__index.css";
-@import "pages/__card.css";
-@import "pages/__grid.css";
-@import "utilities/__custom.css";
-@import "utilities/__skeleton.css";
-@import "topography/__footer.css";
-@import "topography/__header.css";
+@import "pages/news.css";
+@import "pages/index.css";
+@import "pages/card.css";
+@import "pages/grid.css";
+@import "utilities/custom.css";
+@import "utilities/skeleton.css";
+@import "topography/footer.css";
+@import "topography/header.css";

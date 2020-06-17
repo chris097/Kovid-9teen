@@ -47,7 +47,7 @@
     margin-top: 5px;
     padding: 0 10px;
     font-size: small;
-    font-weight: 400;
+    font-weight: 600;
     border-radius: 5px;
     background-color: #fff;
 }
@@ -82,7 +82,7 @@
     display: flex;
     text-align: start;
     align-content: flex-start;
-    font-weight: 400;
+    font-weight: 600;
 }
 .kovid-result .kovid-total-cases,
 .kovid-result .kovid-total-deaths,
@@ -122,22 +122,22 @@
 .kovid-result .kovid-total-recoveries p:last-child{
     color: #0da70d;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .kovid-result .kovid-active-cases p:last-child{
     color: #045be6;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .kovid-result .kovid-new-cases p:last-child{
     color: #a64942;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .kovid-result .kovid-new-deaths p:last-child{
     color: #a80038;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .kovid-dev-map img{
     width: 100%;
@@ -154,11 +154,11 @@
     text-align: center;
     align-content: center;
     font-size: medium;
-    font-weight: 400;
+    font-weight: 500;
 }
 .sheets-contentA p span{
     font-size: large;
-    font-weight: 400;
+    font-weight: 600;
 }
 .sheets-contentA p {
     padding: 2px 15px;

@@ -50,5 +50,5 @@
 // eventController(createUIClass)
 
 document.querySelector('.menu-burgerA').addEventListener('click', () =>{
-   
+   document.querySelector('.menu-burgerB').display.style = 'block'
 })

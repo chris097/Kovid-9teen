@@ -159,15 +159,16 @@
 
 /* mobile navigation bar*/
 
-.menu-burgerA img,
-.menu-burgerB img{
-    width: 30px;
-    height: 30px;
-    display: none;
-}
-.mobile-navbar div{
+.mobile-navbar .menu-burgerA,
+.mobile-navbar .menu-burgerB {
     position: absolute;
     right: 20px;
     top: 15px;
+}
+.menu-burgerA img,
+.menu-burgerB img {
+    width: 30px;
+    height: 30px;
+    display: none;
 }
 

@@ -77,6 +77,7 @@
     padding: 10px;
     border-radius: 20px;
     outline: none;
+    border: none;
 }
 .kovid-result{
     display: flex;
@@ -212,9 +213,9 @@
     .kovid-date{
        display: none;
     }
-   .mobile-navbar .menu-burgerA img{
-    display: block;
-}
+    .mobile-navbar .menu-burgerA img{
+        display: block;
+    }
 } 
 @media screen and (max-width: 650px){
     .kovid-container,

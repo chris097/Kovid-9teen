@@ -20,9 +20,10 @@
           return{
              block: 'block',
              none: 'none',
+             click: 'click',
              menuBurgerA: '.menu-burgerA ',
              menuBurgerB: '.menu-burgerB img',
-             click: 'click',
+             mobileLinks : '.mobile-nav-links'
           }
         }
       }
@@ -37,10 +38,12 @@
      const displayMenuBurgerA = () =>{ 
          UIController(inputBtn.menuBurgerA, inputBtn.none); 
          UIController(inputBtn.menuBurgerB, inputBtn.block);
+         UIController(inputBtn.mobileLinks, inputBtn.block);
      };
 
      const displayMenuBurgerB = () =>{
          UIController(inputBtn.menuBurgerB, inputBtn.none); 
+         UIController(inputBtn.mobileLinks, inputBtn.none);
          UIController(inputBtn.menuBurgerA, inputBtn.block); 
      };
 

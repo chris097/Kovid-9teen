@@ -5,51 +5,50 @@
 */
 
     // 1. UIController gonna be our helper
-    function UIController(className, value){
-        let UI = document.querySelector(className);
-        if(value){
-          UI.style.display = value;
-        }
-        return UI;
-      };
+//     function UIController(className, value){
+//         let UI = document.querySelector(className);
+//         if(value){
+//           UI.style.display = value;
+//         }
+//         return UI;
+//       };
  
- // 2. store classes && values in our object
- function createUIClass(){
-     return {
-       getClass : function(){
-         return{
-            block: 'block',
-            none: 'none',
-            openMenu: '.open-menu',
-            closeMenu: '.close-menu',
-            click: 'click',
-            menuBurgerContainer: '.menu-burger-container'
-         }
-       }
-     }
-   };
+//  // 2. store classes && values in our object
+//  function createUIClass(){
+//      return {
+//        getClass : function(){
+//          return{
+//             block: 'block',
+//             none: 'none',
+//             menuBurgerA: '.menu-burgerA',
+//             menuBurgerB: '.menu-burgerB',
+//             click: 'click',
+//          }
+//        }
+//      }
+//    };
  
-   function eventController (UIClass){
-    // 3-1. global variables
-    let inputClass, inputBtn;
-     inputClass = UIClass();
-     inputBtn = inputClass.getClass();
+//    function eventController (UIClass){
+//     // 3-1. global variables
+//     let inputClass, inputBtn;
+//      inputClass = UIClass();
+//      inputBtn = inputClass.getClass();
 
-    let getOpenMenu = () =>{
-        UIController(inputBtn.menuBurgerContainer, inputBtn.block); 
-        let sd =UIController(inputBtn.closeMenu, inputBtn.block); 
-        console.log (sd)
-        UIController(inputBtn.openMenu, inputBtn.none); 
-    };
+//     const displayMenuBurgerA = () =>{ 
+//         UIController(inputBtn.menuBurgerA, inputBtn.none); 
+//         UIController(inputBtn.menuBurgerB, inputBtn.block);
+//     };
 
-    let getCloseMenu = () =>{
-        UIController(inputBtn.menuBurgerContainer, inputBtn.none); 
-        UIController(inputBtn.openMenu, inputBtn.block); 
-        UIController(inputBtn.closeMenu, inputBtn.none); 
-    };
+//     const displayMenuBurgerB = () =>{
+//         UIController(inputBtn.menuBurgerB, inputBtn.none); 
+//         UIController(inputBtn.menuBurgerA, inputBtn.block); 
+//     };
 
-    UIController(inputBtn.openMenu).addEventListener(inputBtn.click, getOpenMenu, false);
-    UIController(inputBtn.closeMenu).addEventListener(inputBtn.click, getCloseMenu, false);
-}
-eventController(createUIClass)
+//     UIController(inputBtn.menuBurgerA).addEventListener(inputBtn.click, displayMenuBurgerA);
+//     UIController(inputBtn.menuBurgerB).addEventListener(inputBtn.click, displayMenuBurgerB);
+// }
+// eventController(createUIClass)
 
+document.querySelector('.menu-burgerA').addEventListener('click', () =>{
+   
+})

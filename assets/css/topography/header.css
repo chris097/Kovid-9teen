@@ -1,5 +1,8 @@
 .kovid-header{
-    background-image: linear-gradient(180deg, #fff, #f1f2f3);
+    /* background-image: linear-gradient(180deg, #fff, #f1f2f3); */
+    background-color: #fff;
+    top: 0;
+    left: 0;
     /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); */
     /* box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12); */
     /*box-shadow: inset -4px -4px 6px #ffffff, -4px -4px 7px rgba(0, 0, 0, 0.07);*/
@@ -152,5 +155,19 @@
 }
 .kovid-menu-date:hover{
     color: #fd367e;
+}
+
+/* mobile navigation bar*/
+
+.menu-burgerA img,
+.menu-burgerB img{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+.mobile-navbar div{
+    position: absolute;
+    right: 20px;
+    top: 15px;
 }
 

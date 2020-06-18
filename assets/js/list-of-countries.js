@@ -7,6 +7,7 @@ const listCountries = async () => {
         let result = await resp.json()
         console.log(result.Countries)
         getTopTenCountries(result.Countries)
+        getOption(result.Countries)
     }catch{
         console.log(`${err}: 404 NOT FOUND`)
     }
@@ -31,7 +32,23 @@ function getTopTenCountries (country){
          })
          .join('')
          listAll.innerHTML = sorted;
-        
+}
+
+let id = 0
+function getOption (opt){
+    let option = opt.sort((a, b) =>{
+        return a.Country - b.Country
+    })
+    let countryArr = option.map(el => {
+        return`
+        <option value="${id++}">${el.Country}</option>
+        `
+    })
+    let ds = document.getElementById('kovid-countries')
+    ds.innerHTML = countryArr
+    ds.addEventListener('click', (e) => {
+        console.log(e)
+    })
 }
 
 listCountries()

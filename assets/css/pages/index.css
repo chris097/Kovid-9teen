@@ -157,6 +157,7 @@
     align-content: center;
     font-size: medium;
     font-weight: 500;
+    position: relative;
 }
 .sheets-contentA p span{
     font-size: large;

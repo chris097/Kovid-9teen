@@ -80,6 +80,3 @@ loadApi()
 //     }
 //     return arrl;
 // }
-
-    
-

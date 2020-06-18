@@ -29,15 +29,16 @@
     background-color: #f7efef;
     color: #ce0000;
 }
-.column p{
+.column div {
+    display: flex;
     padding: 0 10px;
     font-size: 14px;
     font-weight: 400;
 }
-.column p span{
+.column .new-count{
     background-color: #fff;
     margin-right: 5px;
-    padding: 0 5px;
+    padding: 5px;
     font-size: 11px;
 }
 .column2{

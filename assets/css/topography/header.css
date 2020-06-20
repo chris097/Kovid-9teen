@@ -187,6 +187,8 @@
     font-weight: 700;
     padding-top: 50px;
     display: none;
+    z-index: 2;
+    opacity: 222;
 }
 .mobile-nav-links ul li{
     margin-top: 20px;

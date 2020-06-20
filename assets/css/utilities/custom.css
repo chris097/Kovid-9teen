@@ -12,6 +12,7 @@ body {
   text-size-adjust: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  color: #5d5d5a;
 }
 html::-webkit-scrollbar-track {
   background: #f1f1f1;

@@ -13,6 +13,7 @@
     border-radius: 5px;
     width: 300px;
     padding: 0 10px;
+    height: 50px;
 }
 .column:first-child{
     background-color: aliceblue;
@@ -32,8 +33,8 @@
 }
 .column div {
     display: flex;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 600;
 }
 .column .new-count-1,
 .column .new-count-2,
@@ -41,8 +42,10 @@
 .column .new-count-4{
     background-color: #fff;
     margin-right: 5px;
-    padding: 5px;
+    padding: 2px;
     font-size: 11px;
+    height: 20px;
+    margin-top: 18px;
 }
 .column2{
     display: flex;
@@ -144,6 +147,13 @@
     color: #a80038;
     font-size: 18px;
     font-weight: 600;
+}
+.kol{
+    width: 55px;
+    position: absolute;
+    opacity: .2;
+    margin-bottom: 100px;
+    margin-left: 80px;
 }
 .kovid-dev-map img{
     width: 100%;

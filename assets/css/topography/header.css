@@ -9,7 +9,7 @@
     position: fixed;
     z-index: 100;
     padding: 5px 0;
-    height: 60px;
+    height: 70px;
     width: 100%;
     border-bottom: 1px solid #c5e3f6;
 }
@@ -17,19 +17,20 @@
 .kovid-logo img{
     width: 45px;
     height: 45px;
+    margin-top: 5px;
 }
 
 .kovid-logo span{
     position: absolute;
     margin: 10px 5px;
-    font-size: 18px;
-    color: #1f4287;
+    font-size: 20px;
 }
 
 .kovid-logo span a{
     list-style: none;
     text-decoration: none;
-    color: #045be6;
+    color: #5d5d5a;
+    font-weight: 900;
 }
 .kovid-logo span a:hover{
     color: #fd367e;
@@ -50,10 +51,10 @@
     margin: 0 10px;
     font-size: 14px; 
     list-style: none;
-    padding: 13px 50px 15px 0;
+    padding: 17px 50px 18px 0;
 }
 .kovid-navbar-link ul li:hover{
-    border-bottom: 1.8px solid #045be6;
+    border-bottom: 1.8px solid #fd367e;;
 }
 
 .kovid-navbar-link ul li img{
@@ -76,17 +77,21 @@
 
 .kovid-navbar-link ul li a{
     text-decoration: none;
-    color: #045be6;
+    color: #5d5d5a;
     position: absolute;
     padding: 0 5px;
+    font-size: 16px;
+    font-weight: 600;
 }
 .kovid-navbar-link ul li a:hover{
     color: #fd367e;
 }
 
 .kovid-date{
-    padding-top: 15px;
-    color: #333;
+    padding-top: 17px;
+    color: #5d5d5a;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .kovid-date:hover{

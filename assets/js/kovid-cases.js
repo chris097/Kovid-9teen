@@ -31,8 +31,6 @@ const loadApi = async () => {
         const globe = await res.json()
         let caseForm = globe.Global;
         console.log(caseForm)
-        engine(kovidDate, caseForm.Date)
-        engine(kovidMobileDate, caseForm.Date)
         engine(totalCase, caseForm.TotalConfirmed)
         activeCase.textContent = `${(caseForm.TotalConfirmed) - (caseForm.TotalDeaths + caseForm.TotalRecovered)}`,
         // newActive.textContent = `${(listCases.NewConfirmed) - (listCases.NewDeaths + listCases.NewRecovered)}`
@@ -55,39 +53,3 @@ const loadApi = async () => {
 
 
 loadApi()
-
-
-// the array to be sorted
-// var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
-
-// // temporary array holds objects with position and sort-value
-// var mapped = list.map(function(el, i) {
-//   return { index: i, value: el.toLowerCase() };
-// })
-// console.log(mapped)
-// sorting the mapped array containing the reduced values
-// mapped.sort(function(a, b) {
-//   if (a.value > b.value) {
-//     return 1;
-//   }
-//   if (a.value < b.value) {
-//     return -1;
-//   }
-//   return 0;
-// });
-
-// // container for the resulting order
-// var result = mapped.map(function(el){
-//   return list[el.index];
-// });
-//  console.log(result)
-
-// function num(arr){
-//     let arrl = []
-//     for(let i = 0; i < arr.length; i++){
-//         let sd = arrl.push(arr[i])
-//         console.log(sd)
-//         if(sd === 5) break;
-//     }
-//     return arrl;
-// }

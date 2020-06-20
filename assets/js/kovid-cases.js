@@ -12,6 +12,8 @@ let totalCase = document.querySelector('.total-case'),
     newCount2 = document.querySelector('.new-count-2')
     newCount3 = document.querySelector('.new-count-3')
     newCount4 = document.querySelector('.new-count-4')
+    kovidDate = document.querySelector('.kovid-date')
+    kovidMobileDate = document.querySelector('.kovid-mobile-date')
 
     
 
@@ -29,6 +31,8 @@ const loadApi = async () => {
         const globe = await res.json()
         let caseForm = globe.Global;
         console.log(caseForm)
+        engine(kovidDate, caseForm.Date)
+        engine(kovidMobileDate, caseForm.Date)
         engine(totalCase, caseForm.TotalConfirmed)
         activeCase.textContent = `${(caseForm.TotalConfirmed) - (caseForm.TotalDeaths + caseForm.TotalRecovered)}`,
         // newActive.textContent = `${(listCases.NewConfirmed) - (listCases.NewDeaths + listCases.NewRecovered)}`

@@ -15,7 +15,9 @@ let totalCase = document.querySelector('.total-case'),
     kovidDate = document.querySelector('.kovid-date')
     kovidMobileDate = document.querySelector('.kovid-mobile-date')
 
-    
+const date = new Date().toUTCString()
+kovidDate.textContent = date;
+kovidMobileDate.textContent = date;
 
 const engine = (className, value) =>{
     return className.textContent = value;

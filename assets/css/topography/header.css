@@ -24,6 +24,7 @@
     position: absolute;
     margin: 10px 5px;
     font-size: 20px;
+    font-style: italic;
 }
 
 .kovid-logo span a{
@@ -168,7 +169,7 @@
 .mobile-navbar .menu-burgerB {
     position: absolute;
     right: 20px;
-    top: 15px;
+    top: 22px;
 }
 .menu-burgerA img,
 .menu-burgerB img {
@@ -189,10 +190,20 @@
     display: none;
     z-index: 2;
     opacity: 222;
+    animation-name: animate1;
+    animation-duration: 3s;
+}
+
+@keyframes animate1{
+    from{
+        width: 150px;
+    }
+    to{
+        width: 250px;
+    }
 }
 .mobile-nav-links ul li{
-    margin-top: 20px;
-    padding-left: 20px;
+    margin: 20px 50px;  
 }
 .mobile-nav-links ul li a{
     color: #045be6;
@@ -201,9 +212,10 @@
     color: #c5e3f6;
 }
 .kovid-mobile-date{
-    font-size: small;
+    font-size: 18px;
     font-weight: 300;
     margin-top: 50px;
     text-align: center;
+    transition-delay: 5s;
 }
 

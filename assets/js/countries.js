@@ -1,10 +1,13 @@
 
 let countryUrl = `https://api.covid19api.com/summary`;
+let all = document.querySelector('#all').value;
+console.log(all)
 
 const countryApi = async () => {
     try{
         let response = await fetch(countryUrl)
         let testing = await response.json() 
+        testing.Countries.unshift(all)
         console.log(testing.Countries)
         getCountryDetails(testing.Countries)
     }catch(err){

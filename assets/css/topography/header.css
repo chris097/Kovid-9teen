@@ -32,6 +32,7 @@
     text-decoration: none;
     color: #5d5d5a;
     font-weight: 900;
+    font-family: 'Lobster', cursive;
 }
 .kovid-logo span a:hover{
     color: #fd367e;

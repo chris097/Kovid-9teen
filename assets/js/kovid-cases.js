@@ -32,7 +32,7 @@ const loadApi = async () => {
         let res = await fetch(baseUrl);
         const globe = await res.json()
         let caseForm = globe.Global;
-        console.log(caseForm)
+        // console.log(caseForm)
         engine(totalCase, caseForm.TotalConfirmed)
         activeCase.textContent = `${(caseForm.TotalConfirmed) - (caseForm.TotalDeaths + caseForm.TotalRecovered)}`,
         // newActive.textContent = `${(listCases.NewConfirmed) - (listCases.NewDeaths + listCases.NewRecovered)}`

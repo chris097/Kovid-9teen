@@ -18,7 +18,17 @@
     margin: 0 7px;
     padding: 5px;
 }
-.gridA:hover{
+.gridB{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 0 7px;
+    padding: 5px;
+}
+.gridA:hover,
+.gridB:hover{
     background-color: #cde3f7;
 }
 .grid-country-case{

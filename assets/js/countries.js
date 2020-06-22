@@ -5,8 +5,9 @@ const countryApi = async () => {
     try{
         let response = await fetch(countryUrl)
         let testing = await response.json() 
-        console.log(testing.Countries)
+        // console.log(testing.Countries)
         getCountryDetails(testing.Countries)
+        getModalValue(testing.Countries)
     }catch(err){
         console.log(`${err} NOT FOUND`)
     }
@@ -17,7 +18,7 @@ const perCountryApi = async (counrtyName) => {
         let getCountries = await fetch(`https://api.covid19api.com/country/${counrtyName}`)
         let isACountry = await getCountries.json() 
         let lastName = isACountry[isACountry.length-1]
-        console.log(lastName)
+        // console.log(lastName)
         document.querySelector('.cn').innerHTML = `
        
             <div class="kovid-result">
@@ -63,12 +64,13 @@ const perCountryApi = async (counrtyName) => {
 }
 
 
-let perCountry = document.querySelector('#kovid-countries')
+let perCountry = document.querySelector('#kovid-countries'),
+    gridB = document.querySelector('.gridA .grid-country')
 
  function getCountryDetails (opt){
     // let perCountry = document.querySelector('#kovid-countries').value
     let countryArr = opt.map(el => {
-        console.log(el.Country)
+        // console.log(el.Country)
         return`
         <option value="${el.Country}">${el.Country}</option>
         `
@@ -84,6 +86,21 @@ let perCountry = document.querySelector('#kovid-countries')
     })
  }
 
+ function getModalValue(optA){
+     optA.map(modal => {
+         console.log(modal.Countries)
+     })
+
+    // gridB.addEventListener('click', (e) => {
+    //     e.preventDefault()
+    //     let getGridA = e.target;
+    //     console.log(getGridA)
+    // })
+ }
+
+//  gridB.addEventListener('click', (e) => {
+//     console.log(e.target)
+//  })
 
  countryApi()
 

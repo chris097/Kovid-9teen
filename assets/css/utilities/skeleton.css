@@ -72,6 +72,10 @@ a{
 @media screen and (max-width: 400px){
     .column-2{
         flex-direction: column;
+        margin-top: -20px;
+    }
+    .gridA{
+        margin-top: 20px;
     }
 }
 

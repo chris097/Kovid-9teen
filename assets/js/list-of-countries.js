@@ -5,7 +5,7 @@ const listCountries = async () => {
     try{
         let resp = await fetch(mainUrl)
         let result = await resp.json()
-        console.log(result.Countries)
+        // console.log(result.Countries)
         getTopTenCountries(result.Countries)
         // getOption(result.Countries)
     }catch{
@@ -20,7 +20,7 @@ function getTopTenCountries (country){
     })
 
     let topTen = red.slice(0, 10);
-    console.log(topTen)
+    // console.log(topTen)
     
      let sorted = topTen.map(name => {
              return `

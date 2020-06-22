@@ -26,7 +26,8 @@
              clearFix: '.clear-fix',
              menuBurgerA: '.menu-burgerA ',
              menuBurgerB: '.menu-burgerB img',
-             mobileLinks : '.mobile-nav-links'
+             mobileLinks : '.mobile-nav-links',
+             removeModal: '.remove-modal'
           }
         }
       }
@@ -42,24 +43,32 @@
          UIController(inputBtn.menuBurgerA, inputBtn.none); 
          UIController(inputBtn.menuBurgerB, inputBtn.block);
          UIController(inputBtn.mobileLinks, inputBtn.block);
+         modal()
      };
 
      const displayMenuBurgerB = () =>{
          UIController(inputBtn.menuBurgerB, inputBtn.none); 
          UIController(inputBtn.mobileLinks, inputBtn.none);
          UIController(inputBtn.menuBurgerA, inputBtn.block); 
+    
      };
 
      const displayCountryModal = () =>{
         UIController(inputBtn.clearFix, inputBtn.block);
         setTimeout(() => {
           UIController(inputBtn.do, inputBtn.block);
-        }, 1000);
+        }, 100);
+     }
+
+     const modal = () =>{
+      UIController(inputBtn.clearFix, inputBtn.none); 
+      UIController(inputBtn.do, inputBtn.none); 
      }
 
      UIController(inputBtn.menuBurgerA).addEventListener(inputBtn.click, displayMenuBurgerA);
      UIController(inputBtn.menuBurgerB).addEventListener(inputBtn.click, displayMenuBurgerB);
      UIController(inputBtn.gridA).addEventListener(inputBtn.click, displayCountryModal);
+     UIController(inputBtn.removeModal).addEventListener(inputBtn.click, modal);
  }
 eventController(createUIClass)
 

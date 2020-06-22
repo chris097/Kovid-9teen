@@ -18,9 +18,12 @@
       return {
         getClass : function(){
           return{
+            do: '.do',
              block: 'block',
              none: 'none',
              click: 'click',
+             gridA: '.gridA',
+             clearFix: '.clear-fix',
              menuBurgerA: '.menu-burgerA ',
              menuBurgerB: '.menu-burgerB img',
              mobileLinks : '.mobile-nav-links'
@@ -47,8 +50,16 @@
          UIController(inputBtn.menuBurgerA, inputBtn.block); 
      };
 
+     const displayCountryModal = () =>{
+        UIController(inputBtn.clearFix, inputBtn.block);
+        setTimeout(() => {
+          UIController(inputBtn.do, inputBtn.block);
+        }, 1000);
+     }
+
      UIController(inputBtn.menuBurgerA).addEventListener(inputBtn.click, displayMenuBurgerA);
      UIController(inputBtn.menuBurgerB).addEventListener(inputBtn.click, displayMenuBurgerB);
+     UIController(inputBtn.gridA).addEventListener(inputBtn.click, displayCountryModal);
  }
 eventController(createUIClass)
 

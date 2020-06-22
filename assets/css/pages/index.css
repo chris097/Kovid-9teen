@@ -62,7 +62,7 @@
     padding-top: 5px;
     display: flex;
 }
-.kovid-img-name .country-code {
+.country-code {
     font-size: 22px;
     color: #f5587b;
 }
@@ -206,73 +206,6 @@
  color: #ce0000;
 }
 
-@media screen and (max-width: 1024px){
-    .container{
-        padding: 0 20px;
-    }
-    .kovid-sheets{
-        flex: 1;
-        flex-direction: column;
-        width: 290px;
-    }
-}
-@media screen and (max-width: 954px){
-    .kovid-dev-map img{
-        display: none;
-    }
-    .column{
-        width: 100%;
-    }
-} 
-@media screen and (max-width: 774px){
-    .kovid-navbar-link,
-    .kovid-date{
-       display: none;
-    }
-    .mobile-navbar .menu-burgerA img{
-        display: block;
-    }
-} 
-@media screen and (max-width: 650px){
-    .kovid-container,
-    .section-content{
-        display: 1;
-        flex-direction: column; 
-    }
-    .sectionA select{
-        margin-top: 30px;
-        width: 100%;
-    }
-    .contentB{
-        margin-left: 0px;
-    }
-    .kovid-dev-map img{
-        display: block;
-        width: 100%;
-    }
-    .kovid-sheets{
-        width: 100%;
-    }
-    .kovid-dev-map img{
-        padding: 0px;
-        margin-top: 20px;
-    }
-    .kovid-result,
-    .sheets-container{
-        justify-content: space-between;
-    }
-}
- @media screen and (max-width: 300px){
-    .kovid-result,
-    .sheets-container{
-        flex: 1;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .column p{
-        font-size: 10px;
-    }
-} 
 
 
 

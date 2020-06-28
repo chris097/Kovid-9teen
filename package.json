@@ -1,0 +1,27 @@
+{
+  "name": "kovid-9teen",
+  "version": "1.0.0",
+  "description": "kovid-9teen app is an application that track covid-19 cases globally",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris097/kovid-9teen.git"
+  },
+  "keywords": [
+    "covid",
+    "kovid",
+    "19",
+    "9teen",
+    "teen",
+    "vid"
+  ],
+  "author": "Okeyhacker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris097/kovid-9teen/issues"
+  },
+  "homepage": "https://github.com/chris097/kovid-9teen#readme"
+}

@@ -22,12 +22,9 @@
              block: 'block',
              none: 'none',
              click: 'click',
-             gridA: '.gridA',
-             clearFix: '.clear-fix',
              menuBurgerA: '.menu-burgerA ',
              menuBurgerB: '.menu-burgerB img',
-             mobileLinks : '.mobile-nav-links',
-             removeModal: '.remove-modal'
+             mobileLinks : '.mobile-nav-links'
           }
         }
       }
@@ -53,22 +50,8 @@
     
      };
 
-     const displayCountryModal = () =>{
-        UIController(inputBtn.clearFix, inputBtn.block);
-        setTimeout(() => {
-          UIController(inputBtn.do, inputBtn.block);
-        }, 100);
-     }
-
-     const modal = () =>{
-      UIController(inputBtn.clearFix, inputBtn.none); 
-      UIController(inputBtn.do, inputBtn.none); 
-     }
-
      UIController(inputBtn.menuBurgerA).addEventListener(inputBtn.click, displayMenuBurgerA);
      UIController(inputBtn.menuBurgerB).addEventListener(inputBtn.click, displayMenuBurgerB);
-     UIController(inputBtn.gridA).addEventListener(inputBtn.click, displayCountryModal);
-     UIController(inputBtn.removeModal).addEventListener(inputBtn.click, modal);
  }
 eventController(createUIClass)
 

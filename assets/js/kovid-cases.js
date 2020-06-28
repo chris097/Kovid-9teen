@@ -15,25 +15,29 @@ let totalCase = document.querySelector('.total-case'),
     kovidDate = document.querySelector('.kovid-date')
     kovidMobileDate = document.querySelector('.kovid-mobile-date')
 
+    const engine = (className, value) =>{
+        return className.textContent = value;
+    }
+
 const date = new Date().toUTCString()
-kovidDate.textContent = date;
-kovidMobileDate.textContent = date;
+engine(kovidDate, date)
+engine(kovidMobileDate)
 
-const engine = (className, value) =>{
-    return className.textContent = value;
-}
 
-let baseUrl = "https://api.covid19api.com/summary";
+
+let baseUrl = "https://api.covid19api.com";
 
 
 
 const loadApi = async () => {
     try{
-        let res = await fetch(baseUrl);
+        let res = await fetch(`${baseUrl}/summary`);
         const globe = await res.json()
         let caseForm = globe.Global;
-        // console.log(caseForm)
+        //  console.log(caseForm)
         engine(totalCase, caseForm.TotalConfirmed)
+        engine(newCount1,`+${caseForm.NewConfirmed}`)
+        engine(newCount3, `+${caseForm.NewRecovered}`)
         activeCase.textContent = `${(caseForm.TotalConfirmed) - (caseForm.TotalDeaths + caseForm.TotalRecovered)}`,
         // newActive.textContent = `${(listCases.NewConfirmed) - (listCases.NewDeaths + listCases.NewRecovered)}`
         engine(totalRecovered, caseForm.TotalRecovered)

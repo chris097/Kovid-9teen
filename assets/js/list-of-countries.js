@@ -1,9 +1,9 @@
-let mainUrl = "https://api.covid19api.com/summary";
+let mainUrl = "https://api.covid19api.com";
 let listAll =  document.querySelector('.list-all')
 
 const listCountries = async () => {
     try{
-        let resp = await fetch(mainUrl)
+        let resp = await fetch(`${mainUrl}/summary`)
         let result = await resp.json()
         // console.log(result.Countries)
         getTopTenCountries(result.Countries)

@@ -1,13 +1,13 @@
 
-let countryUrl = `https://api.covid19api.com/summary`;
+let countryUrl = `https://api.covid19api.com`;
 
 const countryApi = async () => {
     try{
-        let response = await fetch(countryUrl)
+    let response = await fetch(`${countryUrl}/summary`)
         let testing = await response.json() 
         // console.log(testing.Countries)
         getCountryDetails(testing.Countries)
-        getModalValue(testing.Countries)
+        
     }catch(err){
         console.log(`${err} NOT FOUND`)
     }
@@ -15,7 +15,7 @@ const countryApi = async () => {
 
 const perCountryApi = async (counrtyName) => {
     try{
-        let getCountries = await fetch(`https://api.covid19api.com/country/${counrtyName}`)
+        let getCountries = await fetch(`${countryUrl}/country/${counrtyName}`)
         let isACountry = await getCountries.json() 
         let lastName = isACountry[isACountry.length-1]
         // console.log(lastName)
@@ -56,7 +56,7 @@ const perCountryApi = async (counrtyName) => {
             <p>New Deaths</p>
             <p><span>${lastName.Recovered - (lastName.Confirmed - lastName.Active)}</span></p>
             </div>
-        `
+        `;
         // document.querySelector('.cn').innerHTML = who
     }catch(err){
         console.log(`${err} NOT FOUND`)
@@ -65,7 +65,7 @@ const perCountryApi = async (counrtyName) => {
 
 
 let perCountry = document.querySelector('#kovid-countries'),
-    gridB = document.querySelector('.gridA .grid-country')
+    gridA = document.querySelector('.gridA')
 
  function getCountryDetails (opt){
     // let perCountry = document.querySelector('#kovid-countries').value
@@ -86,21 +86,29 @@ let perCountry = document.querySelector('#kovid-countries'),
     })
  }
 
- function getModalValue(optA){
-     optA.map(modal => {
-         console.log(modal.Countries)
-     })
+//  function getCountryAllDetails (countryAll){
+//     // let perCountry = document.querySelector('#kovid-countries').value
+//     countryAll.map(elem => {
+//         console.log(elem.Country)
+//         // // return`
+//         // // <div class="country-code">CA</div>
+//         // // <div class="grid-country">
+//         // //     <span>${elem.Country}</span><br />
+//         // //     <span class="grid-country-case">289309484</span>
+//         // // </div>
+//         // `
+//     })
+// //     console.log(countryArray)
+// //     // perCountry.innerHTML = countryArr;
+// //     // console.log(perCountry)
 
-    // gridB.addEventListener('click', (e) => {
-    //     e.preventDefault()
-    //     let getGridA = e.target;
-    //     console.log(getGridA)
-    // })
- }
-
-//  gridB.addEventListener('click', (e) => {
-//     console.log(e.target)
-//  })
+// //     // perCountry.addEventListener('click', (e) => {
+// //     //     e.preventDefault()
+// //     //     let getValue = e.target.value;
+// //     //     console.log(getValue)
+// //     //     perCountryApi(getValue)
+// //     // })
+//  }
 
  countryApi()
 

@@ -1,4 +1,4 @@
-
+    
 let countryUrl = `https://api.covid19api.com`;
 
 const countryApi = async () => {

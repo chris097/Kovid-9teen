@@ -60,7 +60,8 @@ a{
     .kovid-sheets{
         width: 100%;
     }
-    .kovid-dev-map img{
+    .map-container{
+        width: 100%;
         padding: 0px;
         margin-top: 20px;
     }

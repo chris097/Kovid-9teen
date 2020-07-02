@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsmygIBy2UYeWbb2jJDJF4hFbgo9fy82k&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
     <link rel="icon" type="image/svg" href="./assets/icons/virus.svg">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Kovid-9teen an app for tracking coronavirus world wide</title>
@@ -194,8 +199,10 @@
                         </div>
                     </div><!--sectionA-->
                     <div class="sectionB"><!--sectionB-->
-                      <div class="kovid-dev-map">
-                          <img src="./assets/img/GoogleMapTA.jpg" alt="">
+                      <div class="map-container">
+                        <div id="map">
+                            <!-- <img src="./assets/img/GoogleMapTA.jpg" alt=""> -->
+                        </div>
                       </div>
                     </div><!--section B-->
                  </div>

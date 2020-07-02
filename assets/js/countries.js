@@ -86,29 +86,14 @@ let perCountry = document.querySelector('#kovid-countries'),
     })
  }
 
-//  function getCountryAllDetails (countryAll){
-//     // let perCountry = document.querySelector('#kovid-countries').value
-//     countryAll.map(elem => {
-//         console.log(elem.Country)
-//         // // return`
-//         // // <div class="country-code">CA</div>
-//         // // <div class="grid-country">
-//         // //     <span>${elem.Country}</span><br />
-//         // //     <span class="grid-country-case">289309484</span>
-//         // // </div>
-//         // `
-//     })
-// //     console.log(countryArray)
-// //     // perCountry.innerHTML = countryArr;
-// //     // console.log(perCountry)
-
-// //     // perCountry.addEventListener('click', (e) => {
-// //     //     e.preventDefault()
-// //     //     let getValue = e.target.value;
-// //     //     console.log(getValue)
-// //     //     perCountryApi(getValue)
-// //     // })
-//  }
+// map
+var map;
+function initMap(lat, lng) {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 5.476310, lng: 7.025853 },
+    zoom: 12
+  });
+}
 
  countryApi()
 

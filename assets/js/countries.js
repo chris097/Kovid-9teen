@@ -18,7 +18,7 @@ const perCountryApi = async (counrtyName) => {
         let getCountries = await fetch(`${countryUrl}/country/${counrtyName}`)
         let isACountry = await getCountries.json() 
         let lastName = isACountry[isACountry.length-1]
-        // console.log(lastName)
+        console.log(lastName)
         document.querySelector('.cn').innerHTML = `
        
             <div class="kovid-result">
